@@ -1,10 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 const englishHelloPrefix = "Hello, "
 const spanishHelloPrefix = "Hola, "
 const frenchHelloPrefix = "Bonjour, "
+const japaneseHelloPrefix = "Konnichiwa, "
 
 func Hello(name string, language string) string {
 	if name == "" {
@@ -15,11 +19,13 @@ func Hello(name string, language string) string {
 }
 
 func greetingPrefix(language string) (prefix string) {
-	switch language {
-	case french:
+	switch strings.ToLower(language) {
+	case "french":
 		prefix = frenchHelloPrefix
-	case spanish:
+	case "spanish":
 		prefix = spanishHelloPrefix
+	case "japanese":
+		prefix = japaneseHelloPrefix
 	default:
 		prefix = englishHelloPrefix
 	}
