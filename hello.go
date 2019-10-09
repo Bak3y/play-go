@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-const engishHelloPrefix = "Hello, "
+const englishHelloPrefix = "Hello, "
 const spanishHelloPrefix = "Hola, "
 const frenchHelloPrefix = "Bonjour, "
 
@@ -21,7 +21,7 @@ func greetingPrefix(language string) (prefix string) {
 	case spanish:
 		prefix = spanishHelloPrefix
 	default:
-		prefix = engishHelloPrefix
+		prefix = englishHelloPrefix
 	}
 	return
 }
